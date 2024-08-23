@@ -1,13 +1,4 @@
 
-.carousel {
-  width: 100%;
-  max-width: 600px;
-}
-
-.carousel-images img {
-  height: auto;
-  max-height: 80vh;
-}
 
 body {
   background-image: url("https://images6.alphacoders.com/136/1361763.jpeg");
@@ -24,76 +15,79 @@ body {
 }
 
 header {
-  display: flex;
+  display: flex; /* Como los vamos a distribuir */
   justify-content: center;
   align-items: center;
 }
-
+/* Marco / carrusel como tal */
 .carousel {
+  margin: 20px;
   position: relative;
-  width: 80%;
-  max-width: 600px;
-  min-width: none;
-  overflow: hidden;
-  box-shadow: 0px -10px 20px rgba(0, 0, 0, 0.3), -10px 0px 20px rgba(0, 0, 0, 0.3), 10px 0px 20px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 900px;
+  overflow: hidden; /* oculta cualquier parte del contenido que se desborde */
+  box-shadow: 0px -10px 20px rgba(0, 0, 0, 0.3),
+    -10px 0px 20px rgba(0, 0, 0, 0.3), 10px 0px 20px rgba(0, 0, 0, 0.3);
   border-radius: 10px; /* Opcional: añade bordes redondeados para un mejor acabado */
 }
-
+/* Imagenes dentro del carrucel */
 .carousel-images img {
   width: 100%;
   height: auto;
-  max-height: 500px; /* Establece una altura máxima constante */
+  max-height: 600px; /* Establece una altura máxima constante */
   object-fit: cover; /* Asegura que las imágenes no se pixelen y mantengan sus proporciones */
   display: none;
   transition: opacity 0.5s ease-in-out;
 }
-
+/* Comportamiento de las imagenes*/
 .carousel-images img.active {
   display: block;
   opacity: 1;
 }
-
-.carousel-control {
+ /* Controles del carrucel (flechitas) */
+.carousel-control { 
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
-  border: none;
+  border: 0;
   padding: 10px;
   cursor: pointer;
   font-size: 18px;
   user-select: none;
 }
 
+/*Boton izquierdo*/
 .prev {
-  left: 10px;
+  left: 10px; /*posicion*/
 }
-
+/*Boton derecho*/
 .next {
-  right: 10px;
+  right: 15px; /*posicion*/
 }
-
+/*Estilos boton cuando se encuentra desactivado*/
 .carousel-control:disabled {
-  background-color: rgba(0, 0, 0, 0.2);
-  cursor: not-allowed;
+  background-color: rgba(0, 0, 0, 0.2); /* cambio de color */ 
+  cursor: not-allowed; /* Ya no es habil usar el cursor */
 }
-
+/* Barra de los indicadores */
 .carousel-indicators {
+  background-color: #201c1c; 
   text-align: center;
-  margin-top: 10px;
+  margin: 0px;
 }
-
+/* Puntos de los indicadores */
 .dot {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
+  display: inline-block; /* Hace que cada punto se comporte como un bloque en línea */
+  width: 10px; /* Tamaño */
+  height: 10px; /* Tamaño */
   background-color: #bbb;
-  border-radius: 50%;
+  border-radius: 50%; /* Da la forma circular */ 
   margin: 0 5px;
   cursor: pointer;
 }
-
+/* Punto activo */ 
 .dot.active {
-  background-color: #ba9ffa;
+  background-color: #7339fa;
 }
