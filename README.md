@@ -1,3 +1,7 @@
+
+Despliegue de pagina = 
+
+
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/kbbL3N2p)
 # Reto de Carrusel Básico con HTML, CSS y JavaScript
 
@@ -9,7 +13,7 @@ Este proyecto consiste en resolver un reto de desarrollo web en el que se debe c
 
 ## Contexto
 
-El reto de HTML, CSS y JavaScript consiste en crear un carrusel de imágenes sencillo que permita mostrar tres imágenes, una a la vez, con la capacidad de navegar entre ellas usando flechas de navegación o puntos indicadores. Las imágenes necesarias para el carrusel se encuentran dentro de la carpeta `assets`.
+El reto de HTMSL, CS y JavaScript consiste en crear un carrusel de imágenes sencillo que permita mostrar tres imágenes, una a la vez, con la capacidad de navegar entre ellas usando flechas de navegación o puntos indicadores. Las imágenes necesarias para el carrusel se encuentran dentro de la carpeta `assets`.
 
 ## Requisitos
 

@@ -1,0 +1,99 @@
+
+.carousel {
+  width: 100%;
+  max-width: 600px;
+}
+
+.carousel-images img {
+  height: auto;
+  max-height: 80vh;
+}
+
+body {
+  background-image: url("https://images6.alphacoders.com/136/1361763.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel {
+  position: relative;
+  width: 80%;
+  max-width: 600px;
+  min-width: none;
+  overflow: hidden;
+  box-shadow: 0px -10px 20px rgba(0, 0, 0, 0.3), -10px 0px 20px rgba(0, 0, 0, 0.3), 10px 0px 20px rgba(0, 0, 0, 0.3);
+  border-radius: 10px; /* Opcional: añade bordes redondeados para un mejor acabado */
+}
+
+.carousel-images img {
+  width: 100%;
+  height: auto;
+  max-height: 500px; /* Establece una altura máxima constante */
+  object-fit: cover; /* Asegura que las imágenes no se pixelen y mantengan sus proporciones */
+  display: none;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-images img.active {
+  display: block;
+  opacity: 1;
+}
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  user-select: none;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.carousel-control:disabled {
+  background-color: rgba(0, 0, 0, 0.2);
+  cursor: not-allowed;
+}
+
+.carousel-indicators {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #bbb;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #ba9ffa;
+}
