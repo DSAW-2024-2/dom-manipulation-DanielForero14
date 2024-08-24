@@ -1,5 +1,3 @@
-
-
 body {
   background-image: url("https://images6.alphacoders.com/136/1361763.jpeg");
   background-repeat: no-repeat;
@@ -15,37 +13,49 @@ body {
 }
 
 header {
-  display: flex; /* Como los vamos a distribuir */
+  display: flex;
+  /* Como los vamos a distribuir */
   justify-content: center;
   align-items: center;
 }
+
 /* Marco / carrusel como tal */
-.carousel {
-  margin: 20px;
+.carrusel {
+  margin: 5%;
   position: relative;
-  width: 100%;
-  max-width: 900px;
-  overflow: hidden; /* oculta cualquier parte del contenido que se desborde */
+  width: 75vw;
+  max-width: 1000px;
+  min-width: 300px;
+  overflow: hidden;
+  /* oculta cualquier parte del contenido que se desborde */
   box-shadow: 0px -10px 20px rgba(0, 0, 0, 0.3),
     -10px 0px 20px rgba(0, 0, 0, 0.3), 10px 0px 20px rgba(0, 0, 0, 0.3);
-  border-radius: 10px; /* Opcional: añade bordes redondeados para un mejor acabado */
+  border-radius: 10px;
+  /* Opcional: añade bordes redondeados para un mejor acabado */
+}
+img {
+  width: 100%;
 }
 /* Imagenes dentro del carrucel */
-.carousel-images img {
+.carrusel-images img {
   width: 100%;
   height: auto;
-  max-height: 600px; /* Establece una altura máxima constante */
-  object-fit: cover; /* Asegura que las imágenes no se pixelen y mantengan sus proporciones */
+  max-height: 600px;
+  /* Establece una altura máxima constante */
+  object-fit: cover;
+  /* Asegura que las imágenes no se pixelen y mantengan sus proporciones */
   display: none;
   transition: opacity 0.5s ease-in-out;
 }
+
 /* Comportamiento de las imagenes*/
-.carousel-images img.active {
+.carrusel-images img.active {
   display: block;
   opacity: 1;
 }
- /* Controles del carrucel (flechitas) */
-.carousel-control { 
+
+/* Controles del carrucel (flechitas) */
+.carrusel-control {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -60,34 +70,47 @@ header {
 
 /*Boton izquierdo*/
 .prev {
-  left: 10px; /*posicion*/
+  left: 10px;
+  /*posicion*/
 }
+
 /*Boton derecho*/
 .next {
-  right: 15px; /*posicion*/
+  right: 15px;
+  /*posicion*/
 }
+
 /*Estilos boton cuando se encuentra desactivado*/
-.carousel-control:disabled {
-  background-color: rgba(0, 0, 0, 0.2); /* cambio de color */ 
-  cursor: not-allowed; /* Ya no es habil usar el cursor */
+.carrusel-control:disabled {
+  background-color: rgba(0, 0, 0, 0.2);
+  /* cambio de color */
+  cursor: not-allowed;
+  /* Ya no es habil usar el cursor */
 }
+
 /* Barra de los indicadores */
-.carousel-indicators {
-  background-color: #201c1c; 
+.carrusel-indicators {
+  background-color: #201c1c;
   text-align: center;
   margin: 0px;
 }
+
 /* Puntos de los indicadores */
 .dot {
-  display: inline-block; /* Hace que cada punto se comporte como un bloque en línea */
-  width: 10px; /* Tamaño */
-  height: 10px; /* Tamaño */
+  display: inline-block;
+  /* Hace que cada punto se comporte como un bloque en línea */
+  width: 10px;
+  /* Tamaño */
+  height: 10px;
+  /* Tamaño */
   background-color: #bbb;
-  border-radius: 50%; /* Da la forma circular */ 
+  border-radius: 50%;
+  /* Da la forma circular */
   margin: 0 5px;
   cursor: pointer;
 }
-/* Punto activo */ 
+
+/* Punto activo */
 .dot.active {
   background-color: #7339fa;
 }
